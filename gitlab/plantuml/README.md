@@ -28,5 +28,8 @@ https://localhost:8443
 # `svg` instead of `png`
 If you wish to render as svg, adjust the nginx config to point to the `/svg/` endpoint instead.
 ```
-ssl_certificate /etc/nginx/ssl/plantuml.crt;
+# svg
+proxy_pass http://plantuml:8080/svg/;
+# png (default)
+proxy_pass http://plantuml:8080;
 ```
