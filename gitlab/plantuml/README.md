@@ -17,6 +17,10 @@ docker compose up -d
 ```
 5) Add the PlantUML url to gitlab:  
 ```Admin -> General -> PlantUML```
+```shell
 https://gitlab.example.com:8443
+# or if running on same host as gitlab
+https://localhost:8443
+```
 
 `.puml` and `plantuml` .md code blocks should now render.
