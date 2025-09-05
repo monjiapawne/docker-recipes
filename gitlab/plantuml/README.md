@@ -1,4 +1,4 @@
-#
+# Setup
 1) Generate private key
 ```shell
 openssl genrsa -out plantuml.key 2048
@@ -24,3 +24,9 @@ https://localhost:8443
 ```
 
 `.puml` and `plantuml` .md code blocks should now render.
+
+# `svg` instead of `png`
+If you wish to render as svg, adjust the nginx config to point to the `/svg/` endpoint instead.
+```
+ssl_certificate /etc/nginx/ssl/plantuml.crt;
+```
