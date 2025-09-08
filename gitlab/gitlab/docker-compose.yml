@@ -7,6 +7,10 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://$FQDN'
+        #  optional, uncomment these once you have certs, otherwise nginx will handle the ssl generation
+        #nginx['enable'] = true
+        #nginx['ssl_certificate']     = "/etc/gitlab/ssl/gitlab.crt"
+        #nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.key"
     ports:
       - '80:80'
       - '443:443'
