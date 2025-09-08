@@ -1,0 +1,11 @@
+services:
+  step:
+    image: smallstep/step-ca
+    environment:
+      DOCKER_STEPCA_INIT_NAME: "${CA_NAME}"
+      DOCKER_STEPCA_INIT_DNS_NAMES: "localhost,${HOSTNAME_FQDN}"
+    container_name: step-ca
+    volumes:
+      - ./step:/home/step
+    ports:
+      - "9000:9000"
