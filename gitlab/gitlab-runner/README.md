@@ -27,4 +27,4 @@ alpine:latest
 ```
 
 # Troubleshooting
-Place the gitlab host's public cert in /gitlab-runner/config/certs/ so the runner can trust the gitlab server.
+Place the gitlab host's public cert in `/gitlab-runner/config/certs/` so the runner can trust the gitlab server.
