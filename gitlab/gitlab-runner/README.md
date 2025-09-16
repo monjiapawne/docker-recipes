@@ -25,3 +25,6 @@ no idea                          # note ( optional )
 # user should do image: nginx:latest otherwise fall back to :
 alpine:latest
 ```
+
+# Troubleshooting
+Place the gitlab host's public cert in /gitlab-runner/config/certs/ so the runner can trust the gitlab server.
